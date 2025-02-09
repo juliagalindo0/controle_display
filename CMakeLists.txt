@@ -35,10 +35,14 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(controle_display controle_display.c )
+add_executable(controle_display controle_display.c inc/ssd1306.c)
 
 pico_set_program_name(controle_display "controle_display")
 pico_set_program_version(controle_display "0.1")
+
+pico_generate_pio_header(controle_display ${CMAKE_CURRENT_LIST_DIR}/controle_display.pio)
+
+target_sources(controle_display PRIVATE controle_display.c)
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(controle_display 1)
@@ -55,7 +59,10 @@ target_include_directories(controle_display PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(controle_display 
-        
+        pico_stdlib
+        hardware_pio
+        hardware_clocks
+        hardware_i2c
         )
 
 pico_add_extra_outputs(controle_display)
