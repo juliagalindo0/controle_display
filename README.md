@@ -75,3 +75,5 @@ Utilização do Display SSD1306: Exibir caracteres maiúsculos e minúsculos par
 Envio de Informações pela UART: Comunicação serial via UART para envio de mensagens ao Serial Monitor
 
 Organização do Código: O código deve ser bem estruturado, comentado e fácil de entender
+
+link para o vídeo: [https://drive.google.com/file/d/1-BPV5101Uk6EXFS3g6YnUEtmtrOvlCJa/view?usp=sharing](https://drive.google.com/file/d/1-BPV5101Uk6EXFS3g6YnUEtmtrOvlCJa/view?usp=sharing)
