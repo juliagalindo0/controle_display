@@ -68,7 +68,7 @@ void gpio_callback(uint gpio, uint32_t events) {
             gpio_put(LED_RGB_GREEN, !gpio_get(LED_RGB_GREEN));
             printf("Botão A pressionado - LED Verde %s\n", gpio_get(LED_RGB_GREEN) ? "LIGADO" : "DESLIGADO");
 
-            ssd1306_draw_string(&ssd, "GREEN", 5, 20);  // Exibe o caractere no display
+            ssd1306_draw_string(&ssd, "", 5, 20);  // Exibe o caractere no display
 
             if (gpio_get(LED_RGB_GREEN)) {
                 ssd1306_draw_string(&ssd, "LIGADO", 50, 20);  // Exibe o caractere no display
