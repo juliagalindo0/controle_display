@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = 'build/cotrole_display.uf2'
+firmware = 'build/controle_display.uf2'
 elf = 'build/controle_display.elf'
